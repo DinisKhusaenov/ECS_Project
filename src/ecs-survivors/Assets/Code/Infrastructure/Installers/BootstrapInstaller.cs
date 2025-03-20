@@ -1,6 +1,5 @@
 using Code.Gameplay.Cameras.Provider;
 using Code.Gameplay.Common.Collisions;
-using Code.Gameplay.Common.Physics;
 using Code.Gameplay.Common.Random;
 using Code.Gameplay.Common.Time;
 using Code.Gameplay.Input.Service;
@@ -26,7 +25,6 @@ namespace Code.Infrastructure.Installers
       BindAssetManagementServices();
       BindCommonServices();
       BindSystemFactory();
-      BindContexts();
       BindGameplayServices();
       BindCameraProvider();
       BindStateMachine();
@@ -41,15 +39,6 @@ namespace Code.Infrastructure.Installers
     private void BindStateFactory()
     {
       Container.BindInterfacesAndSelfTo<StateFactory>().AsSingle();
-    }
-
-    private void BindContexts()
-    {
-      Container.Bind<Contexts>().FromInstance(Contexts.sharedInstance).AsSingle();
-      
-      Container.Bind<GameContext>().FromInstance(Contexts.sharedInstance.game).AsSingle();
-      Container.Bind<InputContext>().FromInstance(Contexts.sharedInstance.input).AsSingle();
-      Container.Bind<MetaContext>().FromInstance(Contexts.sharedInstance.meta).AsSingle();
     }
 
     private void BindCameraProvider()
@@ -82,7 +71,6 @@ namespace Code.Infrastructure.Installers
     {
       Container.Bind<IRandomService>().To<UnityRandomService>().AsSingle();
       Container.Bind<ICollisionRegistry>().To<CollisionRegistry>().AsSingle();
-      Container.Bind<IPhysicsService>().To<PhysicsService>().AsSingle();
       Container.Bind<ITimeService>().To<UnityTimeService>().AsSingle();
       Container.Bind<ISceneLoader>().To<SceneLoader>().AsSingle();
     }

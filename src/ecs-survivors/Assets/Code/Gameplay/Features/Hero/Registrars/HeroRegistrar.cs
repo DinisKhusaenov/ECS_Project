@@ -24,6 +24,7 @@ namespace Code.Gameplay.Features.Hero.Registrars
                 .AddSpriteRenderer(HeroAnimator.SpriteRenderer)
                 .With(x => x.isHero = true)
                 .With(x => x.isTurnedAlongDirection = true)
+                .With(x => x.isTarget = true)
                 ;
         }
     }

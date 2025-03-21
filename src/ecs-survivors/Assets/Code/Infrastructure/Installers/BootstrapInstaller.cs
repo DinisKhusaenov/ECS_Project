@@ -21,6 +21,7 @@ namespace Code.Infrastructure.Installers
     public override void InstallBindings()
     {
       BindInputService();
+      BindContexts();
       BindInfrastructureServices();
       BindAssetManagementServices();
       BindCommonServices();
@@ -39,6 +40,13 @@ namespace Code.Infrastructure.Installers
     private void BindStateFactory()
     {
       Container.BindInterfacesAndSelfTo<StateFactory>().AsSingle();
+    }
+    
+    private void BindContexts()
+    {
+      Container.Bind<Contexts>().FromInstance(Contexts.sharedInstance).AsSingle();
+   
+      Container.Bind<GameContext>().FromInstance(Contexts.sharedInstance.game).AsSingle();
     }
 
     private void BindCameraProvider()

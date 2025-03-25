@@ -16,7 +16,6 @@ namespace Code.Gameplay.Features.Enemies.Registrars
                 .AddSpeed(Speed)
                 .With(x => x.isEnemy = true)
                 .With(x => x.isTurnedAlongDirection = true)
-                .With(x => x.isMoving = true)
                 ;
         }
 

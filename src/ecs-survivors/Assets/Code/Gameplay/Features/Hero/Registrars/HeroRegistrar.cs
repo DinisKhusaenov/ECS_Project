@@ -16,7 +16,6 @@ namespace Code.Gameplay.Features.Hero.Registrars
                 .AddSpeed(Speed)
                 .With(x => x.isHero = true)
                 .With(x => x.isTurnedAlongDirection = true)
-                .With(x => x.isTarget = true)
                 ;
         }
 

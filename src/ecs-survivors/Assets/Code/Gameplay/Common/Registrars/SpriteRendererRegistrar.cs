@@ -15,8 +15,8 @@ namespace Code.Gameplay.Common.Registrars
 
         public override void UnregisterComponents()
         {
-            Entity
-                .RemoveSpriteRenderer();
+            if (Entity.hasSpriteRenderer)
+                Entity.RemoveSpriteRenderer();
         }
     }
 }

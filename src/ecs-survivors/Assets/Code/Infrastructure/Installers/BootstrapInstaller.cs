@@ -1,5 +1,6 @@
 using Code.Gameplay.Cameras.Provider;
 using Code.Gameplay.Common.Collisions;
+using Code.Gameplay.Common.Physics;
 using Code.Gameplay.Common.Random;
 using Code.Gameplay.Common.Time;
 using Code.Gameplay.Input.Service;
@@ -81,6 +82,7 @@ namespace Code.Infrastructure.Installers
       Container.Bind<ICollisionRegistry>().To<CollisionRegistry>().AsSingle();
       Container.Bind<ITimeService>().To<UnityTimeService>().AsSingle();
       Container.Bind<ISceneLoader>().To<SceneLoader>().AsSingle();
+      Container.Bind<IPhysicsService>().To<PhysicsService>().AsSingle();
     }
 
     private void BindInputService()

@@ -23,3 +23,6 @@ MonoBehaviour:
       Pierce: 3
       ContactRadius: 0.1
       Lifetime: 10
+    EffectSetups:
+    - EffectTypeId: 1
+      Value: 1

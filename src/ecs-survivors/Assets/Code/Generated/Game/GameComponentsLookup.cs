@@ -16,49 +16,56 @@ public static class GameComponentsLookup {
     public const int ViewPrefab = 5;
     public const int Damage = 6;
     public const int DamageTakenAnimator = 7;
-    public const int Id = 8;
-    public const int SizeAdjustable = 9;
-    public const int SpriteRenderer = 10;
-    public const int Transform = 11;
-    public const int WorldPosition = 12;
-    public const int AbilityId = 13;
-    public const int ScatteringProjectileAbility = 14;
-    public const int VegetableBoltAbility = 15;
-    public const int Armament = 16;
-    public const int Processed = 17;
-    public const int ScatteringCount = 18;
-    public const int ScatteringSize = 19;
-    public const int TargetLimit = 20;
-    public const int Cooldown = 21;
-    public const int CooldownLeft = 22;
-    public const int CooldownUp = 23;
-    public const int Enemy = 24;
-    public const int EnemyAnimator = 25;
-    public const int EnemyTypeId = 26;
-    public const int SpawnTimer = 27;
-    public const int Hero = 28;
-    public const int HeroAnimator = 29;
-    public const int CurrentHp = 30;
-    public const int Dead = 31;
-    public const int MaxHp = 32;
-    public const int ProcessingDeath = 33;
-    public const int Direction = 34;
-    public const int MovementAvailable = 35;
-    public const int Moving = 36;
-    public const int RotationAlignedAlongDirection = 37;
-    public const int Speed = 38;
-    public const int TurnedAlongDirection = 39;
-    public const int CollectingTargetsContinuously = 40;
-    public const int CollectTargetsInterval = 41;
-    public const int CollectTargetsTimer = 42;
-    public const int LayerMask = 43;
-    public const int ProcessedTargets = 44;
-    public const int ReadyToCollectTargets = 45;
-    public const int TargetsBuffer = 46;
-    public const int AxisInput = 47;
-    public const int Input = 48;
+    public const int EntityLink = 8;
+    public const int Id = 9;
+    public const int SizeAdjustable = 10;
+    public const int SpriteRenderer = 11;
+    public const int Transform = 12;
+    public const int WorldPosition = 13;
+    public const int AbilityId = 14;
+    public const int ScatteringProjectileAbility = 15;
+    public const int VegetableBoltAbility = 16;
+    public const int Armament = 17;
+    public const int EffectSetups = 18;
+    public const int Processed = 19;
+    public const int ScatteringCount = 20;
+    public const int ScatteringSize = 21;
+    public const int TargetLimit = 22;
+    public const int Cooldown = 23;
+    public const int CooldownLeft = 24;
+    public const int CooldownUp = 25;
+    public const int DamageEffect = 26;
+    public const int Effect = 27;
+    public const int EffectValue = 28;
+    public const int ProducerId = 29;
+    public const int TargetId = 30;
+    public const int Enemy = 31;
+    public const int EnemyAnimator = 32;
+    public const int EnemyTypeId = 33;
+    public const int SpawnTimer = 34;
+    public const int Hero = 35;
+    public const int HeroAnimator = 36;
+    public const int CurrentHp = 37;
+    public const int Dead = 38;
+    public const int MaxHp = 39;
+    public const int ProcessingDeath = 40;
+    public const int Direction = 41;
+    public const int MovementAvailable = 42;
+    public const int Moving = 43;
+    public const int RotationAlignedAlongDirection = 44;
+    public const int Speed = 45;
+    public const int TurnedAlongDirection = 46;
+    public const int CollectingTargetsContinuously = 47;
+    public const int CollectTargetsInterval = 48;
+    public const int CollectTargetsTimer = 49;
+    public const int LayerMask = 50;
+    public const int ProcessedTargets = 51;
+    public const int ReadyToCollectTargets = 52;
+    public const int TargetsBuffer = 53;
+    public const int AxisInput = 54;
+    public const int Input = 55;
 
-    public const int TotalComponents = 49;
+    public const int TotalComponents = 56;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -69,6 +76,7 @@ public static class GameComponentsLookup {
         "ViewPrefab",
         "Damage",
         "DamageTakenAnimator",
+        "EntityLink",
         "Id",
         "SizeAdjustable",
         "SpriteRenderer",
@@ -78,6 +86,7 @@ public static class GameComponentsLookup {
         "ScatteringProjectileAbility",
         "VegetableBoltAbility",
         "Armament",
+        "EffectSetups",
         "Processed",
         "ScatteringCount",
         "ScatteringSize",
@@ -85,6 +94,11 @@ public static class GameComponentsLookup {
         "Cooldown",
         "CooldownLeft",
         "CooldownUp",
+        "DamageEffect",
+        "Effect",
+        "EffectValue",
+        "ProducerId",
+        "TargetId",
         "Enemy",
         "EnemyAnimator",
         "EnemyTypeId",
@@ -121,6 +135,7 @@ public static class GameComponentsLookup {
         typeof(Code.Common.ViewPrefab),
         typeof(Code.Gameplay.Common.Damage),
         typeof(Code.Gameplay.Common.DamageTakenAnimatorComponent),
+        typeof(Code.Gameplay.Common.EntityLink),
         typeof(Code.Gameplay.Common.Id),
         typeof(Code.Gameplay.Common.SizeAdjustable),
         typeof(Code.Gameplay.Common.SpriteRendererComponent),
@@ -130,6 +145,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Abilities.ScatteringProjectileAbility),
         typeof(Code.Gameplay.Features.Abilities.VegetableBoltAbility),
         typeof(Code.Gameplay.Features.Armaments.Armament),
+        typeof(Code.Gameplay.Features.Armaments.EffectSetups),
         typeof(Code.Gameplay.Features.Armaments.Processed),
         typeof(Code.Gameplay.Features.Armaments.ScatteringCount),
         typeof(Code.Gameplay.Features.Armaments.ScatteringSize),
@@ -137,6 +153,11 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Cooldowns.Cooldown),
         typeof(Code.Gameplay.Features.Cooldowns.CooldownLeft),
         typeof(Code.Gameplay.Features.Cooldowns.CooldownUp),
+        typeof(Code.Gameplay.Features.Effects.DamageEffect),
+        typeof(Code.Gameplay.Features.Effects.Effect),
+        typeof(Code.Gameplay.Features.Effects.EffectValue),
+        typeof(Code.Gameplay.Features.Effects.ProducerId),
+        typeof(Code.Gameplay.Features.Effects.TargetId),
         typeof(Code.Gameplay.Features.Enemies.Enemy),
         typeof(Code.Gameplay.Features.Enemies.EnemyAnimatorComponent),
         typeof(Code.Gameplay.Features.Enemies.EnemyTypeIdComponent),

@@ -8,6 +8,7 @@ namespace Code.Gameplay.Features.Armaments
         public ArmamentFeature(ISystemFactory systems)
         {
             Add(systems.Create<MarkProcessedOnTargetLimitExceededSystem>());
+            Add(systems.Create<LaunchingProjectilesInDifferentDirectionsSystem>());
             
             Add(systems.Create<FinalizeProcessedArmamentSystem>());
         }

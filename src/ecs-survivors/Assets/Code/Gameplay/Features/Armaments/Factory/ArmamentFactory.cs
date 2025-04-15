@@ -27,22 +27,72 @@ namespace Code.Gameplay.Features.Armaments.Factory
             ProjectileSetup setup = abilityLevel.ProjectileSetup;
 
             return CreateEntity.Empty()
-                .AddId(_identifiers.Next())
-                .With(x => x.isArmament = true)
-                .AddViewPrefab(abilityLevel.ViewPrefab)
-                .AddWorldPosition(at)
-                .AddSpeed(setup.Speed)
-                .AddDamage(1)
-                .AddRadius(setup.ContactRadius)
-                .AddTargetsBuffer(new List<int>(TargetsBufferSize))
-                .AddProcessedTargets(new List<int>(TargetsBufferSize))
-                .AddTargetLimit(setup.Pierce)
-                .AddLayerMask(CollisionLayer.Enemy.AsMask())
-                .With(x => x.isMovementAvailable = true)
-                .With(x => x.isReadyToCollectTargets = true)
-                .With(x => x.isCollectingTargetsContinuously = true)
-                .With(x => x.isRotationAlignedAlongDirection = true)
-                .AddSelfDestructTimer(setup.Lifetime)
+                    .AddId(_identifiers.Next())
+                    .With(x => x.isArmament = true)
+                    .AddViewPrefab(abilityLevel.ViewPrefab)
+                    .AddWorldPosition(at)
+                    .AddSpeed(setup.Speed)
+                    .AddDamage(1)
+                    .AddRadius(setup.ContactRadius)
+                    .AddTargetsBuffer(new List<int>(TargetsBufferSize))
+                    .AddProcessedTargets(new List<int>(TargetsBufferSize))
+                    .AddTargetLimit(setup.Pierce)
+                    .AddLayerMask(CollisionLayer.Enemy.AsMask())
+                    .With(x => x.isMovementAvailable = true)
+                    .With(x => x.isReadyToCollectTargets = true)
+                    .With(x => x.isCollectingTargetsContinuously = true)
+                    .With(x => x.isRotationAlignedAlongDirection = true)
+                    .AddSelfDestructTimer(setup.Lifetime)
+                ;
+        }
+
+        public GameEntity CreateScatteringProjectile(int level, Vector3 at)
+        {
+            AbilityLevel abilityLevel = _staticDataService.GetAbilityLevel(AbilityId.ScatteringProjectile, level);
+            ProjectileSetup setup = abilityLevel.ProjectileSetup;
+
+            return CreateEntity.Empty()
+                    .AddId(_identifiers.Next())
+                    .With(x => x.isArmament = true)
+                    .AddViewPrefab(abilityLevel.ViewPrefab)
+                    .AddWorldPosition(at)
+                    .AddSpeed(setup.Speed)
+                    .AddDamage(1)
+                    .AddRadius(setup.ContactRadius)
+                    .AddTargetsBuffer(new List<int>(TargetsBufferSize))
+                    .AddProcessedTargets(new List<int>(TargetsBufferSize))
+                    .AddTargetLimit(setup.Pierce)
+                    .AddLayerMask(CollisionLayer.Enemy.AsMask())
+                    .AddScatteringCount(abilityLevel.ScatteringCount)
+                    .AddScatteringSize(abilityLevel.ScatteringSize)
+                    .With(x => x.isMovementAvailable = true)
+                    .With(x => x.isReadyToCollectTargets = true)
+                    .With(x => x.isCollectingTargetsContinuously = true)
+                    .With(x => x.isRotationAlignedAlongDirection = true)
+                    .AddSelfDestructTimer(setup.Lifetime)
+                ;
+        }
+
+        public GameEntity CreateScatteringProjectileSmall(GameEntity entity)
+        {
+            return CreateEntity.Empty()
+                    .AddId(_identifiers.Next())
+                    .With(x => x.isArmament = true)
+                    .AddViewPrefab(entity.ViewPrefab)
+                    .AddWorldPosition(entity.WorldPosition)
+                    .AddSpeed(entity.Speed)
+                    .AddDamage(1)
+                    .AddRadius(entity.Radius * entity.ScatteringSize)
+                    .AddSizeAdjustable(entity.ScatteringSize)
+                    .AddTargetsBuffer(new List<int>(TargetsBufferSize))
+                    .AddProcessedTargets(new List<int>(TargetsBufferSize))
+                    .AddTargetLimit(1)
+                    .AddLayerMask(CollisionLayer.Enemy.AsMask())
+                    .With(x => x.isMovementAvailable = true)
+                    .With(x => x.isReadyToCollectTargets = true)
+                    .With(x => x.isCollectingTargetsContinuously = true)
+                    .With(x => x.isRotationAlignedAlongDirection = true)
+                    .AddSelfDestructTimer(entity.SelfDestructTimer)
                 ;
         }
     }

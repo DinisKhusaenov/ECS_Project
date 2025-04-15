@@ -28,5 +28,17 @@ namespace Code.Gameplay.Features.Abilities.Factory
                 .With(x => x.isVegetableBoltAbility = true)
                 .PutOnCooldown();
         }
+        
+        public GameEntity CreateScatteringProjectileAbility(int level)
+        {
+            var abilityLevel = _staticDataService.GetAbilityLevel(AbilityId.ScatteringProjectile, level);
+            
+            return CreateEntity.Empty()
+                .AddId(_identifiers.Next())
+                .AddAbilityId(AbilityId.ScatteringProjectile)
+                .AddCooldown(abilityLevel.Cooldown)
+                .With(x => x.isScatteringProjectileAbility = true)
+                .PutOnCooldown();
+        }
     }
 }

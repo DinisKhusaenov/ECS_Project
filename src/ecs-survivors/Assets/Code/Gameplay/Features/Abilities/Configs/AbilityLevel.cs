@@ -8,6 +8,10 @@ namespace Code.Gameplay.Features.Abilities.Configs
     {
         public float Cooldown;
 
+        public int ScatteringCount;
+        
+        public float ScatteringSize;
+
         public EntityBehaviour ViewPrefab;
 
         public ProjectileSetup ProjectileSetup;

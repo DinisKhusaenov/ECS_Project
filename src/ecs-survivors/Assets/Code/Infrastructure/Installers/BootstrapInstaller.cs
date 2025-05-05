@@ -1,3 +1,4 @@
+using Code.Common.EntityIndices;
 using Code.Gameplay.Cameras.Provider;
 using Code.Gameplay.Common.Collisions;
 using Code.Gameplay.Common.Physics;
@@ -8,6 +9,7 @@ using Code.Gameplay.Features.Armaments.Factory;
 using Code.Gameplay.Features.Effects.Factory;
 using Code.Gameplay.Features.Enemies.Factory;
 using Code.Gameplay.Features.Hero.Factory;
+using Code.Gameplay.Features.Statuses.Applier;
 using Code.Gameplay.Features.Statuses.Factory;
 using Code.Gameplay.Input.Service;
 using Code.Gameplay.Levels;
@@ -40,6 +42,12 @@ namespace Code.Infrastructure.Installers
       BindStateMachine();
       BindStateFactory();
       BindGameplayFactory();
+      BindEntityIndices();
+    }
+
+    private void BindEntityIndices()
+    {
+      Container.BindInterfacesAndSelfTo<GameEntityIndices>().AsSingle();
     }
 
     private void BindStateMachine()
@@ -68,6 +76,7 @@ namespace Code.Infrastructure.Installers
     {
       Container.Bind<ILevelDataProvider>().To<LevelDataProvider>().AsSingle();
       Container.Bind<IStaticDataService>().To<StaticDataService>().AsSingle();
+      Container.Bind<IStatusApplier>().To<StatusApplier>().AsSingle();
     }
 
     private void BindGameplayFactory()

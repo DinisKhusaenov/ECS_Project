@@ -21,7 +21,7 @@ namespace Code.Gameplay.Features.Hero.Systems
         public void Initialize()
         {
             _heroFactory.Create(_levelDataProvider.StartPoint);
-            _abilityFactory.CreateScatteringProjectileAbility(1);
+            _abilityFactory.CreateVegetableBoltAbility(1);
         }
     }
 }

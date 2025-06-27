@@ -25,9 +25,13 @@ MonoBehaviour:
       Lifetime: 10
     EffectSetups:
     - EffectTypeId: 1
-      Value: 1
+      Value: 0.1
     StatusSetups:
     - StatusTypeId: 1
       Value: 1
       Duration: 3
       Period: 1
+    - StatusTypeId: 2
+      Value: -5
+      Duration: 2
+      Period: 0

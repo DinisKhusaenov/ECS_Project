@@ -5,5 +5,6 @@ namespace Code.Gameplay.Features.Abilities
         Unknown = 0,
         VegetableBolt = 1,
         ScatteringProjectile = 2,
+        OrbitingMushroom = 3,
     }
 }

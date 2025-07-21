@@ -25,70 +25,71 @@ public static class GameComponentsLookup {
     public const int WorldPosition = 14;
     public const int AbilityId = 15;
     public const int OrbitingMushroomAbility = 16;
-    public const int ScatteringProjectileAbility = 17;
-    public const int VegetableBoltAbility = 18;
-    public const int Armament = 19;
-    public const int EffectSetups = 20;
-    public const int Processed = 21;
-    public const int ScatteringCount = 22;
-    public const int ScatteringSize = 23;
-    public const int StatusSetups = 24;
-    public const int TargetLimit = 25;
-    public const int BaseStats = 26;
-    public const int StatChange = 27;
-    public const int StatModifiers = 28;
-    public const int Cooldown = 29;
-    public const int CooldownLeft = 30;
-    public const int CooldownUp = 31;
-    public const int DamageEffect = 32;
-    public const int Effect = 33;
-    public const int EffectValue = 34;
-    public const int HealEffect = 35;
-    public const int ProducerId = 36;
-    public const int TargetId = 37;
-    public const int Enemy = 38;
-    public const int EnemyAnimator = 39;
-    public const int EnemyTypeId = 40;
-    public const int SpawnTimer = 41;
-    public const int Hero = 42;
-    public const int HeroAnimator = 43;
-    public const int CurrentHp = 44;
-    public const int Dead = 45;
-    public const int MaxHp = 46;
-    public const int ProcessingDeath = 47;
-    public const int Direction = 48;
-    public const int MovementAvailable = 49;
-    public const int Moving = 50;
-    public const int OrbitCenterFollowTarget = 51;
-    public const int OrbitCenterPosition = 52;
-    public const int OrbitPhase = 53;
-    public const int OrbitRadius = 54;
-    public const int RotationAlignedAlongDirection = 55;
-    public const int Speed = 56;
-    public const int TurnedAlongDirection = 57;
-    public const int Affected = 58;
-    public const int Applied = 59;
-    public const int ApplierStatusLink = 60;
-    public const int Duration = 61;
-    public const int Freeze = 62;
-    public const int Period = 63;
-    public const int Poison = 64;
-    public const int Status = 65;
-    public const int StatusTypeId = 66;
-    public const int TimeLeft = 67;
-    public const int TimeSinceLastTick = 68;
-    public const int Unapplied = 69;
-    public const int CollectingTargetsContinuously = 70;
-    public const int CollectTargetsInterval = 71;
-    public const int CollectTargetsTimer = 72;
-    public const int LayerMask = 73;
-    public const int ProcessedTargets = 74;
-    public const int ReadyToCollectTargets = 75;
-    public const int TargetsBuffer = 76;
-    public const int AxisInput = 77;
-    public const int Input = 78;
+    public const int ParentAbility = 17;
+    public const int ScatteringProjectileAbility = 18;
+    public const int VegetableBoltAbility = 19;
+    public const int Armament = 20;
+    public const int EffectSetups = 21;
+    public const int Processed = 22;
+    public const int ScatteringCount = 23;
+    public const int ScatteringSize = 24;
+    public const int StatusSetups = 25;
+    public const int TargetLimit = 26;
+    public const int BaseStats = 27;
+    public const int StatChange = 28;
+    public const int StatModifiers = 29;
+    public const int Cooldown = 30;
+    public const int CooldownLeft = 31;
+    public const int CooldownUp = 32;
+    public const int DamageEffect = 33;
+    public const int Effect = 34;
+    public const int EffectValue = 35;
+    public const int HealEffect = 36;
+    public const int ProducerId = 37;
+    public const int TargetId = 38;
+    public const int Enemy = 39;
+    public const int EnemyAnimator = 40;
+    public const int EnemyTypeId = 41;
+    public const int SpawnTimer = 42;
+    public const int Hero = 43;
+    public const int HeroAnimator = 44;
+    public const int CurrentHp = 45;
+    public const int Dead = 46;
+    public const int MaxHp = 47;
+    public const int ProcessingDeath = 48;
+    public const int Direction = 49;
+    public const int MovementAvailable = 50;
+    public const int Moving = 51;
+    public const int OrbitCenterFollowTarget = 52;
+    public const int OrbitCenterPosition = 53;
+    public const int OrbitPhase = 54;
+    public const int OrbitRadius = 55;
+    public const int RotationAlignedAlongDirection = 56;
+    public const int Speed = 57;
+    public const int TurnedAlongDirection = 58;
+    public const int Affected = 59;
+    public const int Applied = 60;
+    public const int ApplierStatusLink = 61;
+    public const int Duration = 62;
+    public const int Freeze = 63;
+    public const int Period = 64;
+    public const int Poison = 65;
+    public const int Status = 66;
+    public const int StatusTypeId = 67;
+    public const int TimeLeft = 68;
+    public const int TimeSinceLastTick = 69;
+    public const int Unapplied = 70;
+    public const int CollectingTargetsContinuously = 71;
+    public const int CollectTargetsInterval = 72;
+    public const int CollectTargetsTimer = 73;
+    public const int LayerMask = 74;
+    public const int ProcessedTargets = 75;
+    public const int ReadyToCollectTargets = 76;
+    public const int TargetsBuffer = 77;
+    public const int AxisInput = 78;
+    public const int Input = 79;
 
-    public const int TotalComponents = 79;
+    public const int TotalComponents = 80;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -108,6 +109,7 @@ public static class GameComponentsLookup {
         "WorldPosition",
         "AbilityId",
         "OrbitingMushroomAbility",
+        "ParentAbility",
         "ScatteringProjectileAbility",
         "VegetableBoltAbility",
         "Armament",
@@ -190,6 +192,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Common.WorldPosition),
         typeof(Code.Gameplay.Features.Abilities.AbilityIdComponent),
         typeof(Code.Gameplay.Features.Abilities.OrbitingMushroomAbility),
+        typeof(Code.Gameplay.Features.Abilities.ParentAbility),
         typeof(Code.Gameplay.Features.Abilities.ScatteringProjectileAbility),
         typeof(Code.Gameplay.Features.Abilities.VegetableBoltAbility),
         typeof(Code.Gameplay.Features.Armaments.Armament),

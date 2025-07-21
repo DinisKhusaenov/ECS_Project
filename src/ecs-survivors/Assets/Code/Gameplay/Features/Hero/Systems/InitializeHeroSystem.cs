@@ -22,6 +22,7 @@ namespace Code.Gameplay.Features.Hero.Systems
         {
             _heroFactory.Create(_levelDataProvider.StartPoint);
             _abilityFactory.CreateVegetableBoltAbility(1);
+            _abilityFactory.CreateOrbitingMushroomAbility(1);
         }
     }
 }

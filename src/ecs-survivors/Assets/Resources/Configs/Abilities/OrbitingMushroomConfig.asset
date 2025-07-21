@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb2ebcca65b34d3e955f0dc1ed8bd57b, type: 3}
-  m_Name: ScatteringProjectileConfig
+  m_Name: OrbitingMushroomConfig
   m_EditorClassIdentifier: 
-  AbilityId: 2
+  AbilityId: 3
   Levels:
-  - Cooldown: 1
-    ScatteringCount: 4
-    ScatteringSize: 0.5
-    ViewPrefab: {fileID: 2747797844354252017, guid: 08ce9f5922001044d87f0b92a159a8c4, type: 3}
+  - Cooldown: 5
+    ScatteringCount: 0
+    ScatteringSize: 0
+    ViewPrefab: {fileID: 2747797844354252017, guid: 92dc63e318e181a4a9587ecf7216ee46, type: 3}
     ProjectileSetup:
-      ProjectileCount: 1
+      ProjectileCount: 3
       Speed: 2
-      Pierce: 1
+      Pierce: 0
       ContactRadius: 0.1
-      Lifetime: 10
-      OrbitRadius: 0
+      Lifetime: 3
+      OrbitRadius: 1
     EffectSetups:
     - EffectTypeId: 1
       Value: 1

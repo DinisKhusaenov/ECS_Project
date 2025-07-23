@@ -14,82 +14,85 @@ public static class GameComponentsLookup {
     public const int View = 3;
     public const int ViewPath = 4;
     public const int ViewPrefab = 5;
-    public const int Damage = 6;
-    public const int DamageTakenAnimator = 7;
-    public const int EntityLink = 8;
-    public const int Id = 9;
-    public const int SizeAdjustable = 10;
-    public const int SpriteRenderer = 11;
-    public const int StatusVisuals = 12;
-    public const int Transform = 13;
-    public const int WorldPosition = 14;
-    public const int AbilityId = 15;
-    public const int OrbitingMushroomAbility = 16;
-    public const int ParentAbility = 17;
-    public const int ScatteringProjectileAbility = 18;
-    public const int VegetableBoltAbility = 19;
-    public const int Armament = 20;
-    public const int EffectSetups = 21;
-    public const int Processed = 22;
-    public const int ScatteringCount = 23;
-    public const int ScatteringSize = 24;
-    public const int StatusSetups = 25;
-    public const int TargetLimit = 26;
-    public const int BaseStats = 27;
-    public const int StatChange = 28;
-    public const int StatModifiers = 29;
-    public const int Cooldown = 30;
-    public const int CooldownLeft = 31;
-    public const int CooldownUp = 32;
-    public const int DamageEffect = 33;
-    public const int Effect = 34;
-    public const int EffectValue = 35;
-    public const int HealEffect = 36;
-    public const int ProducerId = 37;
-    public const int TargetId = 38;
-    public const int Enemy = 39;
-    public const int EnemyAnimator = 40;
-    public const int EnemyTypeId = 41;
-    public const int SpawnTimer = 42;
-    public const int Hero = 43;
-    public const int HeroAnimator = 44;
-    public const int CurrentHp = 45;
-    public const int Dead = 46;
-    public const int MaxHp = 47;
-    public const int ProcessingDeath = 48;
-    public const int Direction = 49;
-    public const int MovementAvailable = 50;
-    public const int Moving = 51;
-    public const int OrbitCenterFollowTarget = 52;
-    public const int OrbitCenterPosition = 53;
-    public const int OrbitPhase = 54;
-    public const int OrbitRadius = 55;
-    public const int RotationAlignedAlongDirection = 56;
-    public const int Speed = 57;
-    public const int TurnedAlongDirection = 58;
-    public const int Affected = 59;
-    public const int Applied = 60;
-    public const int ApplierStatusLink = 61;
-    public const int Duration = 62;
-    public const int Freeze = 63;
-    public const int Period = 64;
-    public const int Poison = 65;
-    public const int Status = 66;
-    public const int StatusTypeId = 67;
-    public const int TimeLeft = 68;
-    public const int TimeSinceLastTick = 69;
-    public const int Unapplied = 70;
-    public const int CollectingTargetsContinuously = 71;
-    public const int CollectTargetsInterval = 72;
-    public const int CollectTargetsTimer = 73;
-    public const int LayerMask = 74;
-    public const int ProcessedTargets = 75;
-    public const int ReadyToCollectTargets = 76;
-    public const int TargetsBuffer = 77;
-    public const int AxisInput = 78;
-    public const int Input = 79;
+    public const int Active = 6;
+    public const int Damage = 7;
+    public const int DamageTakenAnimator = 8;
+    public const int EntityLink = 9;
+    public const int Id = 10;
+    public const int SizeAdjustable = 11;
+    public const int SpriteRenderer = 12;
+    public const int StatusVisuals = 13;
+    public const int Transform = 14;
+    public const int WorldPosition = 15;
+    public const int AbilityId = 16;
+    public const int GarlicAuraAbility = 17;
+    public const int OrbitingMushroomAbility = 18;
+    public const int ParentAbility = 19;
+    public const int ScatteringProjectileAbility = 20;
+    public const int VegetableBoltAbility = 21;
+    public const int Armament = 22;
+    public const int EffectSetups = 23;
+    public const int FollowingProducer = 24;
+    public const int Processed = 25;
+    public const int ScatteringCount = 26;
+    public const int ScatteringSize = 27;
+    public const int StatusSetups = 28;
+    public const int TargetLimit = 29;
+    public const int BaseStats = 30;
+    public const int StatChange = 31;
+    public const int StatModifiers = 32;
+    public const int Cooldown = 33;
+    public const int CooldownLeft = 34;
+    public const int CooldownUp = 35;
+    public const int DamageEffect = 36;
+    public const int Effect = 37;
+    public const int EffectValue = 38;
+    public const int HealEffect = 39;
+    public const int ProducerId = 40;
+    public const int TargetId = 41;
+    public const int Enemy = 42;
+    public const int EnemyAnimator = 43;
+    public const int EnemyTypeId = 44;
+    public const int SpawnTimer = 45;
+    public const int Hero = 46;
+    public const int HeroAnimator = 47;
+    public const int CurrentHp = 48;
+    public const int Dead = 49;
+    public const int MaxHp = 50;
+    public const int ProcessingDeath = 51;
+    public const int Direction = 52;
+    public const int MovementAvailable = 53;
+    public const int Moving = 54;
+    public const int OrbitCenterFollowTarget = 55;
+    public const int OrbitCenterPosition = 56;
+    public const int OrbitPhase = 57;
+    public const int OrbitRadius = 58;
+    public const int RotationAlignedAlongDirection = 59;
+    public const int Speed = 60;
+    public const int TurnedAlongDirection = 61;
+    public const int Affected = 62;
+    public const int Applied = 63;
+    public const int ApplierStatusLink = 64;
+    public const int Duration = 65;
+    public const int Freeze = 66;
+    public const int Period = 67;
+    public const int Poison = 68;
+    public const int Status = 69;
+    public const int StatusTypeId = 70;
+    public const int TimeLeft = 71;
+    public const int TimeSinceLastTick = 72;
+    public const int Unapplied = 73;
+    public const int CollectingTargetsContinuously = 74;
+    public const int CollectTargetsInterval = 75;
+    public const int CollectTargetsTimer = 76;
+    public const int LayerMask = 77;
+    public const int ProcessedTargets = 78;
+    public const int ReadyToCollectTargets = 79;
+    public const int TargetsBuffer = 80;
+    public const int AxisInput = 81;
+    public const int Input = 82;
 
-    public const int TotalComponents = 80;
+    public const int TotalComponents = 83;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -98,6 +101,7 @@ public static class GameComponentsLookup {
         "View",
         "ViewPath",
         "ViewPrefab",
+        "Active",
         "Damage",
         "DamageTakenAnimator",
         "EntityLink",
@@ -108,12 +112,14 @@ public static class GameComponentsLookup {
         "Transform",
         "WorldPosition",
         "AbilityId",
+        "GarlicAuraAbility",
         "OrbitingMushroomAbility",
         "ParentAbility",
         "ScatteringProjectileAbility",
         "VegetableBoltAbility",
         "Armament",
         "EffectSetups",
+        "FollowingProducer",
         "Processed",
         "ScatteringCount",
         "ScatteringSize",
@@ -181,6 +187,7 @@ public static class GameComponentsLookup {
         typeof(Code.Common.View),
         typeof(Code.Common.ViewPath),
         typeof(Code.Common.ViewPrefab),
+        typeof(Code.Gameplay.Common.Active),
         typeof(Code.Gameplay.Common.Damage),
         typeof(Code.Gameplay.Common.DamageTakenAnimatorComponent),
         typeof(Code.Gameplay.Common.EntityLink),
@@ -191,12 +198,14 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Common.TransformComponent),
         typeof(Code.Gameplay.Common.WorldPosition),
         typeof(Code.Gameplay.Features.Abilities.AbilityIdComponent),
+        typeof(Code.Gameplay.Features.Abilities.GarlicAuraAbility),
         typeof(Code.Gameplay.Features.Abilities.OrbitingMushroomAbility),
         typeof(Code.Gameplay.Features.Abilities.ParentAbility),
         typeof(Code.Gameplay.Features.Abilities.ScatteringProjectileAbility),
         typeof(Code.Gameplay.Features.Abilities.VegetableBoltAbility),
         typeof(Code.Gameplay.Features.Armaments.Armament),
         typeof(Code.Gameplay.Features.Armaments.EffectSetups),
+        typeof(Code.Gameplay.Features.Armaments.FollowingProducer),
         typeof(Code.Gameplay.Features.Armaments.Processed),
         typeof(Code.Gameplay.Features.Armaments.ScatteringCount),
         typeof(Code.Gameplay.Features.Armaments.ScatteringSize),

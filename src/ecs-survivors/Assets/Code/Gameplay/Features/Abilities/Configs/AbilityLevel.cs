@@ -18,6 +18,7 @@ namespace Code.Gameplay.Features.Abilities.Configs
         public EntityBehaviour ViewPrefab;
 
         public ProjectileSetup ProjectileSetup;
+        public AuraSetup AuraSetup;
 
         public List<EffectSetup> EffectSetups;
         public List<StatusSetup> StatusSetups;

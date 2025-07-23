@@ -6,5 +6,6 @@ namespace Code.Gameplay.Features.Abilities
         VegetableBolt = 1,
         ScatteringProjectile = 2,
         OrbitingMushroom = 3,
+        GarlicAura = 4,
     }
 }

@@ -1,3 +1,4 @@
+using Code.Gameplay.Features.Abilities;
 using UnityEngine;
 
 namespace Code.Gameplay.Features.Armaments.Factory
@@ -8,5 +9,6 @@ namespace Code.Gameplay.Features.Armaments.Factory
         GameEntity CreateMushroom(int level, Vector3 at, float phase);
         GameEntity CreateScatteringProjectile(int level, Vector3 at);
         GameEntity CreateScatteringProjectileSmall(GameEntity entity);
+        GameEntity CreateEffectAura(AbilityId parentAbilityId, int producer, int level);
     }
 }

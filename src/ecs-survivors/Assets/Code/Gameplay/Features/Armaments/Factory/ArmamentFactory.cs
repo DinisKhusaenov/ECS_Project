@@ -43,6 +43,30 @@ namespace Code.Gameplay.Features.Armaments.Factory
                 ;
         }
 
+        public GameEntity CreateEffectAura(AbilityId parentAbilityId, int producer, int level)
+        {
+            AbilityLevel abilityLevel = _staticDataService.GetAbilityLevel(AbilityId.GarlicAura, level);
+            AuraSetup setup = abilityLevel.AuraSetup;
+
+            return CreateEntity.Empty()
+                    .AddId(_identifiers.Next())
+                    .AddParentAbility(parentAbilityId)
+                    .AddViewPrefab(abilityLevel.ViewPrefab)
+                    .AddLayerMask(CollisionLayer.Enemy.AsMask())
+                    .With(x => x.AddEffectSetups(abilityLevel.EffectSetups),
+                        when: !abilityLevel.EffectSetups.IsNullOrEmpty())
+                    .With(x => x.AddStatusSetups(abilityLevel.StatusSetups),
+                        when: !abilityLevel.StatusSetups.IsNullOrEmpty())
+                    .AddTargetsBuffer(new List<int>(TargetsBufferSize))
+                    .AddCollectTargetsInterval(setup.Interval)
+                    .AddCollectTargetsTimer(0)
+                    .AddProducerId(producer)
+                    .AddWorldPosition(Vector3.zero)
+                    .AddRadius(setup.Radius)
+                    .With(x => x.isFollowingProducer = true)
+                ;
+        }
+
         private GameEntity CreateProjectileEntity(Vector3 at, AbilityLevel abilityLevel, ProjectileSetup setup)
         {
             return CreateEntity.Empty()

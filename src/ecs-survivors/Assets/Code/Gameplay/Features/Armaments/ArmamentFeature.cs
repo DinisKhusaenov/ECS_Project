@@ -9,6 +9,7 @@ namespace Code.Gameplay.Features.Armaments
         {
             Add(systems.Create<MarkProcessedOnTargetLimitExceededSystem>());
             Add(systems.Create<LaunchingProjectilesInDifferentDirectionsSystem>());
+            Add(systems.Create<FollowProducerSystem>());
             
             Add(systems.Create<FinalizeProcessedArmamentSystem>());
         }

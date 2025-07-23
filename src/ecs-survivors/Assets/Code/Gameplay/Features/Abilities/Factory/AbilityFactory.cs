@@ -41,6 +41,14 @@ namespace Code.Gameplay.Features.Abilities.Factory
                 .PutOnCooldown();
         }
         
+        public GameEntity CreateGarlicAuraAbility(int level)
+        {
+            return CreateEntity.Empty()
+                .AddId(_identifiers.Next())
+                .AddAbilityId(AbilityId.GarlicAura)
+                .With(x => x.isGarlicAuraAbility = true);
+        }
+        
         public GameEntity CreateScatteringProjectileAbility(int level)
         {
             var abilityLevel = _staticDataService.GetAbilityLevel(AbilityId.ScatteringProjectile, level);

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Code.Gameplay.Features.Abilities.Configs
 {
-    [CreateAssetMenu(menuName = "Configs", fileName = "AbilityConfig")]
+    [CreateAssetMenu(menuName = "Configs/AbilityConfig", fileName = "AbilityConfig")]
     public class AbilityConfig : ScriptableObject
     {
         public AbilityId AbilityId;

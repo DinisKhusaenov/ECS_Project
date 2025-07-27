@@ -1,6 +1,7 @@
 using System;
 using Code.Common.Entity;
 using Code.Common.Extensions;
+using Code.Gameplay.Features.Enchants;
 using Code.Infrastructure.Identifiers;
 
 namespace Code.Gameplay.Features.Statuses.Factory
@@ -27,6 +28,14 @@ namespace Code.Gameplay.Features.Statuses.Factory
                     status = CreateFreezeStatus(setup, producerId, targetId);
                     break;
                 
+                case StatusTypeId.PoisonEnchant:
+                    status = CreatePoisonEnchantStatus(setup, producerId, targetId);
+                    break;
+                
+                case StatusTypeId.ExplosiveEnchant:
+                    status = CreateExplosiveEnchantStatus(setup, producerId, targetId);
+                    break;
+                
                 default:
                     throw new Exception($"Status with type id {setup.StatusTypeId} does not exist");
             }
@@ -39,6 +48,32 @@ namespace Code.Gameplay.Features.Statuses.Factory
                 ;
             
             return status;
+        }
+
+        private GameEntity CreateExplosiveEnchantStatus(StatusSetup setup, int producerId, int targetId)
+        {
+            return CreateEntity.Empty()
+                .AddId(_identifiers.Next())
+                .AddStatusTypeId(StatusTypeId.ExplosiveEnchant)
+                .AddEnchantTypeId(EnchantTypeId.ExplosiveArmaments)
+                .AddEffectValue(setup.Value)
+                .AddProducerId(producerId)
+                .AddTargetId(targetId)
+                .With(x => x.isStatus = true)
+                .With(x => x.isExplosiveEnchant = true);
+        }
+
+        private GameEntity CreatePoisonEnchantStatus(StatusSetup setup, int producerId, int targetId)
+        {
+            return CreateEntity.Empty()
+                .AddId(_identifiers.Next())
+                .AddStatusTypeId(StatusTypeId.PoisonEnchant)
+                .AddEnchantTypeId(EnchantTypeId.PoisonArmaments)
+                .AddEffectValue(setup.Value)
+                .AddProducerId(producerId)
+                .AddTargetId(targetId)
+                .With(x => x.isStatus = true)
+                .With(x => x.isPoisonEnchant = true);
         }
 
         private GameEntity CreatePoisonStatus(StatusSetup setup, int producerId, int targetId)

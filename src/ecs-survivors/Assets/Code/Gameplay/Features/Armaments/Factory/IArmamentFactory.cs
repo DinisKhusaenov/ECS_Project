@@ -10,5 +10,6 @@ namespace Code.Gameplay.Features.Armaments.Factory
         GameEntity CreateScatteringProjectile(int level, Vector3 at);
         GameEntity CreateScatteringProjectileSmall(GameEntity entity);
         GameEntity CreateEffectAura(AbilityId parentAbilityId, int producer, int level);
+        GameEntity CreateExplosion(int producerId, Vector3 at);
     }
 }

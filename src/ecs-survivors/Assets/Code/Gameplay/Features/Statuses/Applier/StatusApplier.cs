@@ -22,9 +22,9 @@ namespace Code.Gameplay.Features.Statuses.Applier
 
             if (status != null)
                 return status.ReplaceTimeLeft(setup.Duration);
-            else
-                return _statusFactory.CreateStatus(setup, producerId, targetId)
-                    .With(x => x.isApplied = true);
+            
+            return _statusFactory.CreateStatus(setup, producerId, targetId)
+                .With(x => x.isApplied = true);
         }
     }
 }

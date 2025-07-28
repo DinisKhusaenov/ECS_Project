@@ -9,11 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70b92b79d96746dd96ae5e8355772951, type: 3}
-  m_Name: ExpConfig
+  m_Script: {fileID: 11500000, guid: 0cbbbc6b210f445b81d552ef2361653e, type: 3}
+  m_Name: HealingItemConfig
   m_EditorClassIdentifier: 
-  LootTypeId: 1
-  Experience: 1
-  ViewPrefab: {fileID: 416741998203005955, guid: ed05576a6ea2aad4893feb6303a2f872, type: 3}
-  EffectSetups: []
+  LootTypeId: 2
+  Experience: 0
+  ViewPrefab: {fileID: 8324234232870464671, guid: 30fe502620df8d644a0bd50297c666be, type: 3}
+  EffectSetups:
+  - EffectTypeId: 2
+    Value: 10
   StatusSetups: []

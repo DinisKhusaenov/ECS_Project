@@ -4,8 +4,11 @@ using System.Linq;
 using Code.Gameplay.Features.Abilities;
 using Code.Gameplay.Features.Abilities.Configs;
 using Code.Gameplay.Features.Enchants;
+using Code.Gameplay.Features.LevelUp;
 using Code.Gameplay.Features.Loot;
 using Code.Gameplay.Features.Loot.Configs;
+using Code.Gameplay.Windows;
+using Code.Gameplay.Windows.Configs;
 using UnityEngine;
 
 namespace Code.Gameplay.StaticData
@@ -15,12 +18,16 @@ namespace Code.Gameplay.StaticData
         private Dictionary<AbilityId,AbilityConfig> _abilityById;
         private Dictionary<EnchantTypeId,EnchantConfig> _enchantById;
         private Dictionary<LootTypeId,LootConfig> _lootById;
+        private Dictionary<WindowId,GameObject> _windowPrefabs;
+        private LevelUpConfig _levelUp;
 
         public void LoadAll()
         {
             LoadAbilities();
             LoadEnchants();
             LoadLoot();
+            LoadWindows();
+            LoadLevelUpRules();
         }
 
         public AbilityConfig GetAbilityConfig(AbilityId abilityId)
@@ -30,6 +37,16 @@ namespace Code.Gameplay.StaticData
 
             throw new Exception($"Ability config for {abilityId} was not founded");
         }
+
+        public int MaxLevel => _levelUp.MaxLevel;
+
+        public float ExperienceForLevel(int level) =>
+            _levelUp.ExperienceForLevel[level];
+
+        public GameObject GetWindowPrefab(WindowId id) =>
+            _windowPrefabs.TryGetValue(id, out GameObject prefab)
+                ? prefab
+                : throw new Exception($"Prefab config for window {id} was not founded");
         
         public EnchantConfig GetEnchantConfig(EnchantTypeId typeId)
         {
@@ -73,6 +90,19 @@ namespace Code.Gameplay.StaticData
         {
             _lootById = Resources.LoadAll<LootConfig>("Configs/Loots")
                 .ToDictionary(x => x.LootTypeId, x => x);
+        }
+        
+        private void LoadWindows()
+        {
+            _windowPrefabs = Resources
+                .Load<WindowsConfig>("Config/Windows/windowsConfig")
+                .WindowConfigs
+                .ToDictionary(x => x.Id, x => x.Prefab);
+        }
+        
+        private void LoadLevelUpRules()
+        {
+            _levelUp = Resources.Load<LevelUpConfig>("Configs/LevelUp/LevelUpConfig");
         }
     }
 }

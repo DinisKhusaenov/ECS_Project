@@ -6,9 +6,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Code.Gameplay.Features.Loot;
-
 public sealed partial class GameMatcher {
 
     static Entitas.IMatcher<GameEntity> _matcherLootTypeId;
@@ -37,10 +34,10 @@ public sealed partial class GameMatcher {
 public partial class GameEntity {
 
     public Code.Gameplay.Features.Loot.LootTypeIdComponent lootTypeId { get { return (Code.Gameplay.Features.Loot.LootTypeIdComponent)GetComponent(GameComponentsLookup.LootTypeId); } }
-    public LootTypeId LootTypeId { get { return lootTypeId.Value; } }
+    public Code.Gameplay.Features.Loot.LootTypeId LootTypeId { get { return lootTypeId.Value; } }
     public bool hasLootTypeId { get { return HasComponent(GameComponentsLookup.LootTypeId); } }
 
-    public GameEntity AddLootTypeId(LootTypeId newValue) {
+    public GameEntity AddLootTypeId(Code.Gameplay.Features.Loot.LootTypeId newValue) {
         var index = GameComponentsLookup.LootTypeId;
         var component = (Code.Gameplay.Features.Loot.LootTypeIdComponent)CreateComponent(index, typeof(Code.Gameplay.Features.Loot.LootTypeIdComponent));
         component.Value = newValue;
@@ -48,7 +45,7 @@ public partial class GameEntity {
         return this;
     }
 
-    public GameEntity ReplaceLootTypeId(LootTypeId newValue) {
+    public GameEntity ReplaceLootTypeId(Code.Gameplay.Features.Loot.LootTypeId newValue) {
         var index = GameComponentsLookup.LootTypeId;
         var component = (Code.Gameplay.Features.Loot.LootTypeIdComponent)CreateComponent(index, typeof(Code.Gameplay.Features.Loot.LootTypeIdComponent));
         component.Value = newValue;

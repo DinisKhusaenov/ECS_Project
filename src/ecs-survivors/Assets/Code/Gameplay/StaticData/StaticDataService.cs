@@ -71,8 +71,8 @@ namespace Code.Gameplay.StaticData
         
         private void LoadLoot()
         {
-            _enchantById = Resources.LoadAll<EnchantConfig>("Configs/Loots")
-                .ToDictionary(x => x.TypeId, x => x);
+            _lootById = Resources.LoadAll<LootConfig>("Configs/Loots")
+                .ToDictionary(x => x.LootTypeId, x => x);
         }
     }
 }

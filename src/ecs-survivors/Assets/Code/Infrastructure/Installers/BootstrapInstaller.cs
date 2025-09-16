@@ -5,12 +5,14 @@ using Code.Gameplay.Common.Physics;
 using Code.Gameplay.Common.Random;
 using Code.Gameplay.Common.Time;
 using Code.Gameplay.Features.Abilities.Factory;
+using Code.Gameplay.Features.Abilities.Upgrade;
 using Code.Gameplay.Features.Armaments.Factory;
 using Code.Gameplay.Features.Effects.Factory;
 using Code.Gameplay.Features.Enchants.UIFactories;
 using Code.Gameplay.Features.Enemies.Factory;
 using Code.Gameplay.Features.Hero.Factory;
 using Code.Gameplay.Features.LevelUp.Services;
+using Code.Gameplay.Features.LevelUp.Windows;
 using Code.Gameplay.Features.Loot.Factory;
 using Code.Gameplay.Features.Statuses.Applier;
 using Code.Gameplay.Features.Statuses.Factory;
@@ -55,6 +57,7 @@ namespace Code.Infrastructure.Installers
     {
       Container.Bind<IEnchantUIFactory>().To<EnchantUIFactory>().AsSingle();
       Container.Bind<IWindowFactory>().To<WindowFactory>().AsSingle();
+      Container.Bind<IAbilityUIFactory>().To<AbilityUIFactory>().AsSingle();
     }
     
     private void BindUIServices()
@@ -95,6 +98,7 @@ namespace Code.Infrastructure.Installers
       Container.Bind<IStaticDataService>().To<StaticDataService>().AsSingle();
       Container.Bind<IStatusApplier>().To<StatusApplier>().AsSingle();
       Container.Bind<ILevelUpService>().To<LevelUpService>().AsSingle();
+      Container.Bind<IAbilityUpgradeService>().To<AbilityUpgradeService>().AsSingle();
     }
 
     private void BindGameplayFactory()

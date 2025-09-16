@@ -38,6 +38,7 @@ namespace Code.Gameplay.Features.Abilities.Factory
                 .AddAbilityId(AbilityId.OrbitingMushroom)
                 .AddCooldown(abilityLevel.Cooldown)
                 .With(x => x.isOrbitingMushroomAbility = true)
+                .With(x => x.isRecreatedOnUpgrade = true)
                 .PutOnCooldown();
         }
         
@@ -46,19 +47,9 @@ namespace Code.Gameplay.Features.Abilities.Factory
             return CreateEntity.Empty()
                 .AddId(_identifiers.Next())
                 .AddAbilityId(AbilityId.GarlicAura)
-                .With(x => x.isGarlicAuraAbility = true);
-        }
-        
-        public GameEntity CreateScatteringProjectileAbility(int level)
-        {
-            var abilityLevel = _staticDataService.GetAbilityLevel(AbilityId.ScatteringProjectile, level);
-            
-            return CreateEntity.Empty()
-                .AddId(_identifiers.Next())
-                .AddAbilityId(AbilityId.ScatteringProjectile)
-                .AddCooldown(abilityLevel.Cooldown)
-                .With(x => x.isScatteringProjectileAbility = true)
-                .PutOnCooldown();
+                .With(x => x.isRecreatedOnUpgrade = true)
+                .With(x => x.isGarlicAuraAbility = true)
+                ;
         }
     }
 }

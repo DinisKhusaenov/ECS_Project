@@ -1,4 +1,6 @@
+using Code.Gameplay.Features.Abilities;
 using Code.Gameplay.Features.Abilities.Factory;
+using Code.Gameplay.Features.Abilities.Upgrade;
 using Code.Gameplay.Features.Hero.Factory;
 using Code.Gameplay.Features.Statuses;
 using Code.Gameplay.Features.Statuses.Applier;
@@ -11,33 +13,25 @@ namespace Code.Gameplay.Features.Hero.Systems
     {
         private readonly IHeroFactory _heroFactory;
         private readonly ILevelDataProvider _levelDataProvider;
-        private readonly IAbilityFactory _abilityFactory;
         private readonly IStatusApplier _statusApplier;
+        private readonly IAbilityUpgradeService _abilityUpgradeService;
 
         public InitializeHeroSystem(
             IHeroFactory heroFactory, 
             ILevelDataProvider levelDataProvider, 
-            IAbilityFactory abilityFactory,
-            IStatusApplier statusApplier)
+            IStatusApplier statusApplier,
+            IAbilityUpgradeService abilityUpgradeService)
         {
             _heroFactory = heroFactory;
             _levelDataProvider = levelDataProvider;
-            _abilityFactory = abilityFactory;
             _statusApplier = statusApplier;
+            _abilityUpgradeService = abilityUpgradeService;
         }
         
         public void Initialize()
         {
             GameEntity hero = _heroFactory.Create(_levelDataProvider.StartPoint);
-            _abilityFactory.CreateVegetableBoltAbility(1);
-            _abilityFactory.CreateOrbitingMushroomAbility(1);
-            _abilityFactory.CreateGarlicAuraAbility(1);
-
-            // _statusApplier.ApplyStatus(new StatusSetup()
-            // {
-            //     StatusTypeId = StatusTypeId.PoisonEnchant,
-            //     Duration = 10
-            // }, hero.Id, hero.Id);
+            _abilityUpgradeService.InitializeAbility(AbilityId.VegetableBolt);
             
             _statusApplier.ApplyStatus(new StatusSetup()
             {

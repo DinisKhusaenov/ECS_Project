@@ -9,15 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb2ebcca65b34d3e955f0dc1ed8bd57b, type: 3}
+  m_Script: {fileID: 11500000, guid: 9833df43fb064a3199752651eaefcfde, type: 3}
   m_Name: GarlicAuraConfig
   m_EditorClassIdentifier: 
-  AbilityId: 4
+  AbilityId: 3
   Levels:
-  - Cooldown: 0
-    ScatteringCount: 0
-    ScatteringSize: 0
+  - Icon: {fileID: 21300000, guid: 7c5b1d69d323a2c489af81f57a7a9602, type: 3}
+    Description: Adds an odourous aura
+    Cooldown: 0
     ViewPrefab: {fileID: 358252503597409121, guid: c4c8cf39ebe3672468c50bd2fedcd936, type: 3}
+    EffectSetups: []
+    StatusSetups:
+    - StatusTypeId: 2
+      Value: -5
+      Duration: 0.2
+      Period: 0
     ProjectileSetup:
       ProjectileCount: 0
       Speed: 0
@@ -28,9 +34,69 @@ MonoBehaviour:
     AuraSetup:
       Radius: 2
       Interval: 0.5
-    EffectSetups: []
+  - Icon: {fileID: 21300000, guid: 7c5b1d69d323a2c489af81f57a7a9602, type: 3}
+    Description: Increases odour strength
+    Cooldown: 0
+    ViewPrefab: {fileID: 358252503597409121, guid: c4c8cf39ebe3672468c50bd2fedcd936, type: 3}
+    EffectSetups:
+    - EffectTypeId: 1
+      Value: 0.2
     StatusSetups:
     - StatusTypeId: 2
       Value: -5
       Duration: 0.2
       Period: 0
+    ProjectileSetup:
+      ProjectileCount: 0
+      Speed: 0
+      Pierce: 0
+      ContactRadius: 0
+      Lifetime: 0
+      OrbitRadius: 0
+    AuraSetup:
+      Radius: 5
+      Interval: 0.5
+  - Icon: {fileID: 21300000, guid: 7c5b1d69d323a2c489af81f57a7a9602, type: 3}
+    Description: Increases odour strength even further
+    Cooldown: 0
+    ViewPrefab: {fileID: 358252503597409121, guid: c4c8cf39ebe3672468c50bd2fedcd936, type: 3}
+    EffectSetups:
+    - EffectTypeId: 1
+      Value: 0.35
+    StatusSetups:
+    - StatusTypeId: 2
+      Value: -5
+      Duration: 0.2
+      Period: 0
+    ProjectileSetup:
+      ProjectileCount: 0
+      Speed: 0
+      Pierce: 0
+      ContactRadius: 0
+      Lifetime: 0
+      OrbitRadius: 0
+    AuraSetup:
+      Radius: 8
+      Interval: 0.5
+  - Icon: {fileID: 21300000, guid: 7c5b1d69d323a2c489af81f57a7a9602, type: 3}
+    Description: Increases odour stunrate
+    Cooldown: 0
+    ViewPrefab: {fileID: 358252503597409121, guid: c4c8cf39ebe3672468c50bd2fedcd936, type: 3}
+    EffectSetups:
+    - EffectTypeId: 1
+      Value: 0.35
+    StatusSetups:
+    - StatusTypeId: 2
+      Value: -5
+      Duration: 0.2
+      Period: 0
+    ProjectileSetup:
+      ProjectileCount: 0
+      Speed: 0
+      Pierce: 0
+      ContactRadius: 0
+      Lifetime: 0
+      OrbitRadius: 0
+    AuraSetup:
+      Radius: 8
+      Interval: 0.3

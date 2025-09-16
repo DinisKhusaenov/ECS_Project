@@ -28,85 +28,87 @@ public static class GameComponentsLookup {
     public const int GarlicAuraAbility = 17;
     public const int OrbitingMushroomAbility = 18;
     public const int ParentAbility = 19;
-    public const int ScatteringProjectileAbility = 20;
-    public const int VegetableBoltAbility = 21;
-    public const int Armament = 22;
-    public const int EffectSetups = 23;
-    public const int FollowingProducer = 24;
-    public const int Processed = 25;
-    public const int ScatteringCount = 26;
-    public const int ScatteringSize = 27;
-    public const int StatusSetups = 28;
-    public const int TargetLimit = 29;
-    public const int BaseStats = 30;
-    public const int StatChange = 31;
-    public const int StatModifiers = 32;
-    public const int Cooldown = 33;
-    public const int CooldownLeft = 34;
-    public const int CooldownUp = 35;
-    public const int DamageEffect = 36;
-    public const int Effect = 37;
-    public const int EffectValue = 38;
-    public const int HealEffect = 39;
-    public const int ProducerId = 40;
-    public const int TargetId = 41;
-    public const int EnchantHolder = 42;
-    public const int EnchantTypeId = 43;
-    public const int EnchantVisuals = 44;
-    public const int ExplosiveEnchant = 45;
-    public const int PoisonEnchant = 46;
-    public const int Enemy = 47;
-    public const int EnemyAnimator = 48;
-    public const int EnemyTypeId = 49;
-    public const int SpawnTimer = 50;
-    public const int Hero = 51;
-    public const int HeroAnimator = 52;
-    public const int ExperienceMeter = 53;
-    public const int LevelUp = 54;
-    public const int CurrentHp = 55;
-    public const int Dead = 56;
-    public const int MaxHp = 57;
-    public const int ProcessingDeath = 58;
-    public const int Collected = 59;
-    public const int Experience = 60;
-    public const int LootTypeId = 61;
-    public const int PickupRadius = 62;
-    public const int Pullable = 63;
-    public const int Pulling = 64;
-    public const int Direction = 65;
-    public const int MovementAvailable = 66;
-    public const int Moving = 67;
-    public const int OrbitCenterFollowTarget = 68;
-    public const int OrbitCenterPosition = 69;
-    public const int OrbitPhase = 70;
-    public const int OrbitRadius = 71;
-    public const int RotationAlignedAlongDirection = 72;
-    public const int Speed = 73;
-    public const int TurnedAlongDirection = 74;
-    public const int Affected = 75;
-    public const int Applied = 76;
-    public const int ApplierStatusLink = 77;
-    public const int Duration = 78;
-    public const int Freeze = 79;
-    public const int Period = 80;
-    public const int Poison = 81;
-    public const int Status = 82;
-    public const int StatusTypeId = 83;
-    public const int TimeLeft = 84;
-    public const int TimeSinceLastTick = 85;
-    public const int Unapplied = 86;
-    public const int CollectingTargetsContinuously = 87;
-    public const int CollectTargetsInterval = 88;
-    public const int CollectTargetsTimer = 89;
-    public const int LayerMask = 90;
-    public const int ProcessedTargets = 91;
-    public const int Reached = 92;
-    public const int ReadyToCollectTargets = 93;
-    public const int TargetsBuffer = 94;
-    public const int AxisInput = 95;
-    public const int Input = 96;
+    public const int RecreatedOnUpgrade = 20;
+    public const int ScatteringProjectileAbility = 21;
+    public const int UpgradeRequest = 22;
+    public const int VegetableBoltAbility = 23;
+    public const int Armament = 24;
+    public const int EffectSetups = 25;
+    public const int FollowingProducer = 26;
+    public const int Processed = 27;
+    public const int ScatteringCount = 28;
+    public const int ScatteringSize = 29;
+    public const int StatusSetups = 30;
+    public const int TargetLimit = 31;
+    public const int BaseStats = 32;
+    public const int StatChange = 33;
+    public const int StatModifiers = 34;
+    public const int Cooldown = 35;
+    public const int CooldownLeft = 36;
+    public const int CooldownUp = 37;
+    public const int DamageEffect = 38;
+    public const int Effect = 39;
+    public const int EffectValue = 40;
+    public const int HealEffect = 41;
+    public const int ProducerId = 42;
+    public const int TargetId = 43;
+    public const int EnchantHolder = 44;
+    public const int EnchantTypeId = 45;
+    public const int EnchantVisuals = 46;
+    public const int ExplosiveEnchant = 47;
+    public const int PoisonEnchant = 48;
+    public const int Enemy = 49;
+    public const int EnemyAnimator = 50;
+    public const int EnemyTypeId = 51;
+    public const int SpawnTimer = 52;
+    public const int Hero = 53;
+    public const int HeroAnimator = 54;
+    public const int ExperienceMeter = 55;
+    public const int LevelUp = 56;
+    public const int CurrentHp = 57;
+    public const int Dead = 58;
+    public const int MaxHp = 59;
+    public const int ProcessingDeath = 60;
+    public const int Collected = 61;
+    public const int Experience = 62;
+    public const int LootTypeId = 63;
+    public const int PickupRadius = 64;
+    public const int Pullable = 65;
+    public const int Pulling = 66;
+    public const int Direction = 67;
+    public const int MovementAvailable = 68;
+    public const int Moving = 69;
+    public const int OrbitCenterFollowTarget = 70;
+    public const int OrbitCenterPosition = 71;
+    public const int OrbitPhase = 72;
+    public const int OrbitRadius = 73;
+    public const int RotationAlignedAlongDirection = 74;
+    public const int Speed = 75;
+    public const int TurnedAlongDirection = 76;
+    public const int Affected = 77;
+    public const int Applied = 78;
+    public const int ApplierStatusLink = 79;
+    public const int Duration = 80;
+    public const int Freeze = 81;
+    public const int Period = 82;
+    public const int Poison = 83;
+    public const int Status = 84;
+    public const int StatusTypeId = 85;
+    public const int TimeLeft = 86;
+    public const int TimeSinceLastTick = 87;
+    public const int Unapplied = 88;
+    public const int CollectingTargetsContinuously = 89;
+    public const int CollectTargetsInterval = 90;
+    public const int CollectTargetsTimer = 91;
+    public const int LayerMask = 92;
+    public const int ProcessedTargets = 93;
+    public const int Reached = 94;
+    public const int ReadyToCollectTargets = 95;
+    public const int TargetsBuffer = 96;
+    public const int AxisInput = 97;
+    public const int Input = 98;
 
-    public const int TotalComponents = 97;
+    public const int TotalComponents = 99;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -129,7 +131,9 @@ public static class GameComponentsLookup {
         "GarlicAuraAbility",
         "OrbitingMushroomAbility",
         "ParentAbility",
+        "RecreatedOnUpgrade",
         "ScatteringProjectileAbility",
+        "UpgradeRequest",
         "VegetableBoltAbility",
         "Armament",
         "EffectSetups",
@@ -229,7 +233,9 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Abilities.GarlicAuraAbility),
         typeof(Code.Gameplay.Features.Abilities.OrbitingMushroomAbility),
         typeof(Code.Gameplay.Features.Abilities.ParentAbility),
+        typeof(Code.Gameplay.Features.Abilities.RecreatedOnUpgrade),
         typeof(Code.Gameplay.Features.Abilities.ScatteringProjectileAbility),
+        typeof(Code.Gameplay.Features.Abilities.UpgradeRequest),
         typeof(Code.Gameplay.Features.Abilities.VegetableBoltAbility),
         typeof(Code.Gameplay.Features.Armaments.Armament),
         typeof(Code.Gameplay.Features.Armaments.EffectSetups),

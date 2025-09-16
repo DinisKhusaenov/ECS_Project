@@ -95,9 +95,10 @@ namespace Code.Gameplay.StaticData
         private void LoadWindows()
         {
             _windowPrefabs = Resources
-                .Load<WindowsConfig>("Config/Windows/windowsConfig")
+                .Load<WindowsConfig>("Configs/Windows/windowsConfig")
                 .WindowConfigs
                 .ToDictionary(x => x.Id, x => x.Prefab);
+            
         }
         
         private void LoadLevelUpRules()

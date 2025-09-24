@@ -19,96 +19,95 @@ public static class GameComponentsLookup {
     public const int DamageTakenAnimator = 8;
     public const int EntityLink = 9;
     public const int Id = 10;
-    public const int SizeAdjustable = 11;
-    public const int SpriteRenderer = 12;
-    public const int StatusVisuals = 13;
-    public const int Transform = 14;
-    public const int WorldPosition = 15;
-    public const int AbilityId = 16;
-    public const int GarlicAuraAbility = 17;
-    public const int OrbitingMushroomAbility = 18;
-    public const int ParentAbility = 19;
-    public const int RecreatedOnUpgrade = 20;
-    public const int ScatteringProjectileAbility = 21;
-    public const int UpgradeRequest = 22;
-    public const int VegetableBoltAbility = 23;
-    public const int Armament = 24;
-    public const int EffectSetups = 25;
-    public const int FollowingProducer = 26;
-    public const int Processed = 27;
-    public const int ScatteringCount = 28;
-    public const int ScatteringSize = 29;
-    public const int StatusSetups = 30;
-    public const int TargetLimit = 31;
-    public const int BaseStats = 32;
-    public const int StatChange = 33;
-    public const int StatModifiers = 34;
-    public const int Cooldown = 35;
-    public const int CooldownLeft = 36;
-    public const int CooldownUp = 37;
-    public const int DamageEffect = 38;
-    public const int Effect = 39;
-    public const int EffectValue = 40;
-    public const int HealEffect = 41;
-    public const int ProducerId = 42;
-    public const int TargetId = 43;
-    public const int EnchantHolder = 44;
-    public const int EnchantTypeId = 45;
-    public const int EnchantVisuals = 46;
-    public const int ExplosiveEnchant = 47;
-    public const int PoisonEnchant = 48;
-    public const int Enemy = 49;
-    public const int EnemyAnimator = 50;
-    public const int EnemyTypeId = 51;
-    public const int SpawnTimer = 52;
-    public const int Hero = 53;
-    public const int HeroAnimator = 54;
-    public const int ExperienceMeter = 55;
-    public const int LevelUp = 56;
-    public const int CurrentHp = 57;
-    public const int Dead = 58;
-    public const int MaxHp = 59;
-    public const int ProcessingDeath = 60;
-    public const int Collected = 61;
-    public const int Experience = 62;
-    public const int LootTypeId = 63;
-    public const int PickupRadius = 64;
-    public const int Pullable = 65;
-    public const int Pulling = 66;
-    public const int Direction = 67;
-    public const int MovementAvailable = 68;
-    public const int Moving = 69;
-    public const int OrbitCenterFollowTarget = 70;
-    public const int OrbitCenterPosition = 71;
-    public const int OrbitPhase = 72;
-    public const int OrbitRadius = 73;
-    public const int RotationAlignedAlongDirection = 74;
-    public const int Speed = 75;
-    public const int TurnedAlongDirection = 76;
-    public const int Affected = 77;
-    public const int Applied = 78;
-    public const int ApplierStatusLink = 79;
-    public const int Duration = 80;
-    public const int Freeze = 81;
-    public const int Period = 82;
-    public const int Poison = 83;
-    public const int Status = 84;
-    public const int StatusTypeId = 85;
-    public const int TimeLeft = 86;
-    public const int TimeSinceLastTick = 87;
-    public const int Unapplied = 88;
-    public const int CollectingTargetsContinuously = 89;
-    public const int CollectTargetsInterval = 90;
-    public const int CollectTargetsTimer = 91;
-    public const int LayerMask = 92;
-    public const int ProcessedTargets = 93;
-    public const int Reached = 94;
-    public const int ReadyToCollectTargets = 95;
-    public const int TargetsBuffer = 96;
-    public const int AxisInput = 97;
-    public const int Input = 98;
+    public const int SpriteRenderer = 11;
+    public const int StatusVisuals = 12;
+    public const int Transform = 13;
+    public const int WorldPosition = 14;
+    public const int AbilityId = 15;
+    public const int GarlicAuraAbility = 16;
+    public const int OrbitingMushroomAbility = 17;
+    public const int ParentAbility = 18;
+    public const int RecreatedOnUpgrade = 19;
+    public const int ScatteringProjectileAbility = 20;
+    public const int UpgradeRequest = 21;
+    public const int VegetableBoltAbility = 22;
+    public const int Armament = 23;
+    public const int EffectSetups = 24;
+    public const int FollowingProducer = 25;
+    public const int Processed = 26;
+    public const int ScatteringCount = 27;
+    public const int ScatteringSize = 28;
+    public const int StatusSetups = 29;
+    public const int TargetLimit = 30;
+    public const int BaseStats = 31;
+    public const int StatChange = 32;
+    public const int StatModifiers = 33;
+    public const int Cooldown = 34;
+    public const int CooldownLeft = 35;
+    public const int CooldownUp = 36;
+    public const int DamageEffect = 37;
+    public const int Effect = 38;
+    public const int EffectValue = 39;
+    public const int HealEffect = 40;
+    public const int ProducerId = 41;
+    public const int TargetId = 42;
+    public const int EnchantHolder = 43;
+    public const int EnchantTypeId = 44;
+    public const int EnchantVisuals = 45;
+    public const int ExplosiveEnchant = 46;
+    public const int PoisonEnchant = 47;
+    public const int Enemy = 48;
+    public const int EnemyAnimator = 49;
+    public const int EnemyTypeId = 50;
+    public const int SpawnTimer = 51;
+    public const int Hero = 52;
+    public const int HeroAnimator = 53;
+    public const int ExperienceMeter = 54;
+    public const int LevelUp = 55;
+    public const int CurrentHp = 56;
+    public const int Dead = 57;
+    public const int MaxHp = 58;
+    public const int ProcessingDeath = 59;
+    public const int Collected = 60;
+    public const int Experience = 61;
+    public const int LootTypeId = 62;
+    public const int PickupRadius = 63;
+    public const int Pullable = 64;
+    public const int Pulling = 65;
+    public const int Direction = 66;
+    public const int MovementAvailable = 67;
+    public const int Moving = 68;
+    public const int OrbitCenterFollowTarget = 69;
+    public const int OrbitCenterPosition = 70;
+    public const int OrbitPhase = 71;
+    public const int OrbitRadius = 72;
+    public const int RotationAlignedAlongDirection = 73;
+    public const int Speed = 74;
+    public const int TurnedAlongDirection = 75;
+    public const int Affected = 76;
+    public const int Applied = 77;
+    public const int ApplierStatusLink = 78;
+    public const int Duration = 79;
+    public const int Freeze = 80;
+    public const int Period = 81;
+    public const int Poison = 82;
+    public const int Status = 83;
+    public const int StatusTypeId = 84;
+    public const int TimeLeft = 85;
+    public const int TimeSinceLastTick = 86;
+    public const int Unapplied = 87;
+    public const int CollectingTargetsContinuously = 88;
+    public const int CollectTargetsInterval = 89;
+    public const int CollectTargetsTimer = 90;
+    public const int LayerMask = 91;
+    public const int ProcessedTargets = 92;
+    public const int Reached = 93;
+    public const int ReadyToCollectTargets = 94;
+    public const int TargetsBuffer = 95;
+    public const int AxisInput = 96;
+    public const int Input = 97;
 
-    public const int TotalComponents = 99;
+    public const int TotalComponents = 98;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -122,7 +121,6 @@ public static class GameComponentsLookup {
         "DamageTakenAnimator",
         "EntityLink",
         "Id",
-        "SizeAdjustable",
         "SpriteRenderer",
         "StatusVisuals",
         "Transform",
@@ -221,10 +219,9 @@ public static class GameComponentsLookup {
         typeof(Code.Common.ViewPrefab),
         typeof(Code.Gameplay.Common.Active),
         typeof(Code.Gameplay.Common.Damage),
-        typeof(Code.Gameplay.Common.DamageTakenAnimatorComponent),
+        typeof(Code.Gameplay.Common.DamageTakenAnimator),
         typeof(Code.Gameplay.Common.EntityLink),
         typeof(Code.Gameplay.Common.Id),
-        typeof(Code.Gameplay.Common.SizeAdjustable),
         typeof(Code.Gameplay.Common.SpriteRendererComponent),
         typeof(Code.Gameplay.Common.StatusVisualsComponent),
         typeof(Code.Gameplay.Common.TransformComponent),

@@ -25,7 +25,7 @@ namespace Code.Gameplay.Features.LevelUp.Services
 
         private void UpdateLevel()
         {
-            if (CurrentLevel >= _staticDataService.MaxLevel)
+            if (CurrentLevel >= _staticDataService.MaxLevel())
                 return;
 
             float experienceForLevel = _staticDataService.ExperienceForLevel(CurrentLevel + 1);

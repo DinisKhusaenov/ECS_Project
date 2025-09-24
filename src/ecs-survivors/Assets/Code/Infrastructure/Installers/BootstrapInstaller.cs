@@ -24,6 +24,7 @@ using Code.Infrastructure.AssetManagement;
 using Code.Infrastructure.Identifiers;
 using Code.Infrastructure.Loading;
 using Code.Infrastructure.States.Factory;
+using Code.Infrastructure.States.GameStates;
 using Code.Infrastructure.States.StateMachine;
 using Code.Infrastructure.Systems;
 using Code.Infrastructure.View.Factory;
@@ -46,6 +47,7 @@ namespace Code.Infrastructure.Installers
       BindGameplayServices();
       BindCameraProvider();
       BindStateMachine();
+      BindGameStates();
       BindStateFactory();
       BindGameplayFactory();
       BindEntityIndices();
@@ -78,6 +80,16 @@ namespace Code.Infrastructure.Installers
     private void BindStateFactory()
     {
       Container.BindInterfacesAndSelfTo<StateFactory>().AsSingle();
+    }
+
+    private void BindGameStates()
+    {
+      Container.BindInterfacesAndSelfTo<BootstrapState>().AsSingle();
+      Container.BindInterfacesAndSelfTo<LoadingHomeScreenState>().AsSingle();
+      Container.BindInterfacesAndSelfTo<HomeScreenState>().AsSingle();
+      Container.BindInterfacesAndSelfTo<LoadingBattleState>().AsSingle();
+      Container.BindInterfacesAndSelfTo<BattleEnterState>().AsSingle();
+      Container.BindInterfacesAndSelfTo<BattleLoopState>().AsSingle();
     }
     
     private void BindContexts()

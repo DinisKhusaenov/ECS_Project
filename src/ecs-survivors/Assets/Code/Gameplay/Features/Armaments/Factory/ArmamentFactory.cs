@@ -121,7 +121,6 @@ namespace Code.Gameplay.Features.Armaments.Factory
                     .AddSpeed(entity.Speed)
                     .AddDamage(1)
                     .AddRadius(entity.Radius * entity.ScatteringSize)
-                    .AddSizeAdjustable(entity.ScatteringSize)
                     .AddTargetsBuffer(new List<int>(TargetsBufferSize))
                     .AddProcessedTargets(new List<int>(TargetsBufferSize))
                     .AddTargetLimit(1)

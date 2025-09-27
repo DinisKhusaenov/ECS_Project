@@ -5,21 +5,21 @@ namespace Code.Gameplay.Features.Hero.Systems
     public class SetHeroDirectionByInput : IExecuteSystem
     {
         private readonly IGroup<GameEntity> _heroes;
-        private readonly IGroup<GameEntity> _inputs;
+        private readonly IGroup<InputEntity> _inputs;
 
-        public SetHeroDirectionByInput(GameContext game)
+        public SetHeroDirectionByInput(GameContext game, InputContext input)
         {
             _heroes = game.GetGroup(GameMatcher
                 .AllOf(
                     GameMatcher.Hero,
                     GameMatcher.MovementAvailable));
-            _inputs = game.GetGroup(GameMatcher.Input);
+            _inputs = input.GetGroup(InputMatcher.Input);
         }
         
         public void Execute()
         {
-            foreach (var input in _inputs)
-            foreach (var hero in _heroes)
+            foreach (InputEntity input in _inputs)
+            foreach (GameEntity hero in _heroes)
             {
                 hero.isMoving = input.hasAxisInput;
 

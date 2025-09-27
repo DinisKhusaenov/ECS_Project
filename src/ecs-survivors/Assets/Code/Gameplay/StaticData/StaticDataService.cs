@@ -110,7 +110,7 @@ namespace Code.Gameplay.StaticData
     private void LoadLoot()
     {
       _lootById = Resources
-        .LoadAll<LootConfig>("Configs/Loot")
+        .LoadAll<LootConfig>("Configs/Loots")
         .ToDictionary(x => x.LootTypeId, x => x);
     }
 

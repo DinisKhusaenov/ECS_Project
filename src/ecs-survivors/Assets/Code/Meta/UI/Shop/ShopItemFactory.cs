@@ -3,7 +3,6 @@ using Code.Common.Entity;
 using Code.Gameplay.StaticData;
 using Code.Infrastructure.Identifiers;
 using Code.Meta.UI.Shop.Items;
-using Code.Meta.UI.Shop.Systems;
 
 namespace Code.Meta.UI.Shop
 {
@@ -26,9 +25,8 @@ namespace Code.Meta.UI.Shop
       {
         case ShopItemKind.Booster:
           return CreateMetaEntity.Empty()
-            .AddId(_identifiers.Next())
-            .AddGoldGainBoost(config.Boost)
-            .AddDuration(config.Duration);
+              .AddId(_identifiers.Next())
+            ;
         default:
           throw new ArgumentOutOfRangeException();
       }

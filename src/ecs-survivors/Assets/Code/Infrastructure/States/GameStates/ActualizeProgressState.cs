@@ -60,7 +60,7 @@ namespace Code.Infrastructure.States.GameStates
         MetaEntity tick = CreateMetaEntity
           .Empty()
           .AddTick(MetaConstants.SimulationTickSeconds);
-
+      
         _actualizationFeature.Execute();
         _actualizationFeature.Cleanup();
         

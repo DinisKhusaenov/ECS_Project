@@ -20,8 +20,8 @@ namespace Code.Infrastructure.Systems
     void IExecuteSystem.Execute()
     {
       _timeToExecute -= _time.DeltaTime;
-      if (_timeToExecute > 0)
-        return;
+
+      if (_timeToExecute > 0) return;
       
       _timeToExecute = _executeIntervalSeconds;
 

@@ -31,7 +31,6 @@ using Code.Infrastructure.View.Factory;
 using Code.Meta.UI.GoldHolder.Service;
 using Code.Meta.UI.Shop;
 using Code.Meta.UI.Shop.Service;
-using Code.Meta.UI.Shop.Systems;
 using Code.Meta.UI.Shop.UIFactory;
 using Code.Progress.Provider;
 using Code.Progress.SaveLoad;

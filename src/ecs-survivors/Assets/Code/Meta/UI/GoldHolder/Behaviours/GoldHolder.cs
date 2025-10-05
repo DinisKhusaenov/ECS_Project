@@ -1,4 +1,5 @@
-﻿using Code.Meta.UI.GoldHolder.Service;
+﻿using System;
+using Code.Meta.UI.GoldHolder.Service;
 using TMPro;
 using UnityEngine;
 using Zenject;
@@ -19,7 +20,6 @@ namespace Code.Meta.UI.GoldHolder.Behaviours
     private void Start()
     {
       _storage.GoldChanged += UpdateGold;
-      _storage.GoldBoostChanged += UpdateBoost;
       
       UpdateGold();
     }
@@ -29,23 +29,9 @@ namespace Code.Meta.UI.GoldHolder.Behaviours
       _storage.GoldChanged -= UpdateGold;
     }
 
-    private void UpdateGold() => 
-      Amount.text = _storage.CurrentGold.ToString("0");
-
-    private void UpdateBoost()
+    private void UpdateGold()
     {
-      float boost = _storage.GoldGainBoost;
-
-      switch (boost)
-      {
-        case > 0:
-          Boost.gameObject.SetActive(true);
-          Boost.text = boost.ToString("+0%");
-          break;
-        default:
-          Boost.gameObject.SetActive(false);
-          break;
-      }
+      Amount.text = _storage.CurrentGold.ToString("0");
     }
   }
 }

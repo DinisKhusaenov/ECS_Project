@@ -10,9 +10,9 @@ namespace Code.Infrastructure.States.GameStates
   {
     private readonly ISystemFactory _systems;
     private readonly GameContext _gameContext;
-    private HomeScreenFeature _homeScreenFeature;
     private readonly IStorageUIService _storage;
     private readonly IShopUIService _shopUIService;
+    private HomeScreenFeature _homeScreenFeature;
 
     public HomeScreenState(
       ISystemFactory systems, 

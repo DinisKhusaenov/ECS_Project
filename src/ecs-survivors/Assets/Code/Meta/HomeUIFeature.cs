@@ -1,4 +1,5 @@
 using Code.Infrastructure.Systems;
+using Code.Meta.UI.GoldHolder.Systems;
 using Code.Meta.UI.Shop;
 
 namespace Code.Meta
@@ -8,6 +9,7 @@ namespace Code.Meta
     public HomeUIFeature(ISystemFactory systems)
     {
       Add(systems.Create<ShopFeature>());
+      Add(systems.Create<RefreshGoldSystem>());
     }
   }
 }

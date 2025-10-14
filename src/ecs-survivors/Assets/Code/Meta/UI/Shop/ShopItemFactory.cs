@@ -26,7 +26,9 @@ namespace Code.Meta.UI.Shop
         case ShopItemKind.Booster:
           return CreateMetaEntity.Empty()
               .AddId(_identifiers.Next())
-            ;
+              .AddGoldGainBoost(config.Boost)
+              .AddDuration(config.Duration);
+        
         default:
           throw new ArgumentOutOfRangeException();
       }
